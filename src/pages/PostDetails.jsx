@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate , useParams } from 'react-router-dom'
-import { Author, Categories, Comments, CommentsForm, PostDetail, PostWidget, Loader } from '../component';
+import { Author, Categories, Comments, CommentsForm, PostDetail, PostWidget, Loader, Footer } from '../component';
 import { getCategories, getComments, getPostDetails, getSimilarPost } from '../services';
 
 const PostDetails = () => {
@@ -61,7 +61,8 @@ const PostDetails = () => {
     <>
     {loading && <Loader/>}
     {postDetails && (
-      <div className='container mx-auto px-10 mb-8'>
+      <>
+      <div className='container mx-auto sm:px-10 px-1 mb-4'>
           {/* <Head>
               <title>write-code - {post.title}</title>
               <link rel='icon' href='/favicon.ico'/>
@@ -81,6 +82,8 @@ const PostDetails = () => {
               </div>
           </div>
       </div>
+      <Footer />
+      </>
     )}
     </>
   )

@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom'
 const PostCard = ({post}) => {
   // console.log(post)
   return (
-    <div className='bg-white shadow-lg rounded-xl p-0 lg:p-8 pb-12 mb-8 outline outline-2 outline-offset-0 outline-gray-300 border-gray-300'>
+    <div className='bg-white rounded-xl p-0 pb-12 mb-8 ring-2 ring-gray-200'>
         <div className='relative overflow-hidden shadow-md pb-80 mb-6'>
           <img 
             src={post.featuredimage.url} 
             alt={post.title} 
-            className='object-top absolute h-80 w-full object-cover shadow-lg rounded-t-xl lg:rounded-xl' 
+            className='object-top absolute h-80 w-full object-cover shadow-lg rounded-t-xl' 
           />
         </div>
-        <h1 className='transition duration-700 text-center mb-8 cursor-pointer
+        <h1 className='transition duration-700 text-center mb-8 px-1 cursor-pointer
           hover:text-blue-600 text-3xl font-semibold'
         >
           <Link to={`/post/${post.slug}`}>
@@ -45,7 +45,7 @@ const PostCard = ({post}) => {
         </p>
         <div className='text-center'>
           <Link to={`/post/${post.slug}`}>
-            <span className='transition duration-500 transform hover:-translate-y-1 inline-block bg-blue-600 hover:bg-blue-700 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer'>
+            <span className='transition duration-300 transform inline-block bg-blue-600 hover:bg-blue-700 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer'>
               Continue Reading
             </span>
           </Link>

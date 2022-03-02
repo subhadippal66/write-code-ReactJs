@@ -15,7 +15,7 @@ const Header = () => {
             <div className='float-left block py-2'>
                 <Link to='/' href='/'>
                     <span className='cursor-pointer font-bold text-2xl text-blue-600'>
-                        {'<>write-code</>'}
+                        {'<write-code/>'}
                     </span>
                 </Link>
             </div>

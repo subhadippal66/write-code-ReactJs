@@ -8,26 +8,27 @@ const PostWidget = ({relatedPosts, slug}) => {
 
   // console.log(relatedPosts)
   return (
-    <div className='bg-white shadow-lg rounded-xl p-4 sm:p-8 outline outline-2 outline-gray-300 mb-8'>
+    <div className='bg-white rounded-xl p-4 sm:p-8 ring-2 ring-gray-200 mb-8'>
       <h3 className='font-semibold mb-8 text-xl border-b pb-4'>
         {slug? 'Related Posts' : 'Recent Posts'}
       </h3>
       {relatedPosts.map((post)=>(
-        <div key={post.title} className='flex items-center w-full mb-4'>
-          <div className='w-16 flex-none'>
-            <img alt={post.title} height='60px' width='60px' className='align-middle rounded-full' src={post.featuredimage.url} />
-          </div>
+        <Link to={`/post/${post.slug}`}>
+          <div key={post.title} className='flex flex-row items-center justify-start mb-2 py-2 rounded-full hover:bg-slate-100 hover:text-blue-700 ease-linear transition duration-300'>
 
-          <div className='flex-grow ml-4'>
-            <p className='text-gray-500 text-xs'>
-              {moment(post.createdAt).format('DD MMMM, YYYY')}
-            </p>
-            <Link className='text-sm' key={post.title} to={`/post/${post.slug}`}>
-              {post.title}
-            </Link>
-          </div>
+            <img alt={post.title} height='60px' width='60px' className='align-middle object-cover rounded-full' src={post.featuredimage.url} />
 
-        </div>
+            <div className='flex-col text-left ml-4'>
+              <p className='text-gray-500 text-xs'>
+                {moment(post.createdAt).format('DD MMMM, YYYY')}
+              </p>
+              <span className='text-sm' key={post.title} >
+                {post.title}
+              </span>
+            </div>
+
+          </div>
+        </Link>
       ))}
     </div>
   )
