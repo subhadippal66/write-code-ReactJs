@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const PostCard = ({post}) => {
   // console.log(post)
   return (
-    <div className='bg-white rounded-xl p-0 pb-12 mb-8 ring-2 ring-gray-200'>
+    <div className='bg-white rounded-xl p-0 pb-12 mb-8 ringg-2 shadow-lg ring-grayy-400'>
         <div className='relative overflow-hidden shadow-md pb-80 mb-6'>
           <img 
             src={post.featuredimage.url} 

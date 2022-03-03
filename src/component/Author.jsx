@@ -2,7 +2,7 @@ import React from 'react'
 
 const Author = ({author}) => {
   return (
-    <div className='text-center mb-8 mt-20 relative rounded-xl bg-white p-4 ring-2 ring-gray-200 '>
+    <div className='text-center mb-8 mt-20 relative rounded-xl bg-white p-4 ringg-2 shadow-lg ring-grayy-400 '>
         <div className='absolute left-0 right-0 -top-14'>
             <img
               alt={author.name}

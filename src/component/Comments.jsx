@@ -5,7 +5,7 @@ import parse from 'html-react-parser'
 const Comments = ({comments}) => {
   return <>
       {comments.length>0 && (
-        <div className='bg-white rounded-xl p-4 sm:p-8 ring-2 ring-gray-200 mb-8'>
+        <div className='bg-white rounded-xl p-4 sm:p-8 ringg-2 shadow-lg ring-grayy-400 mb-8'>
           <h3 className='text-xl mb-8 font-semibold border-b border-gray-300 pb-4'>
             {comments.length}
             {' '}

@@ -8,12 +8,12 @@ const PostWidget = ({relatedPosts, slug}) => {
 
   // console.log(relatedPosts)
   return (
-    <div className='bg-white rounded-xl p-4 sm:p-8 ring-2 ring-gray-200 mb-8'>
-      <h3 className='font-semibold mb-8 text-xl border-b pb-4'>
+    <div className='bg-white rounded-xl p-4 sm:p-8 ringg-2 shadow-lg ring-grayy-400 mb-8'>
+      <h3 className='font-semibold mb-8 text-xl border-b pb-4 text-center'>
         {slug? 'Related Posts' : 'Recent Posts'}
       </h3>
       {relatedPosts.map((post)=>(
-        <Link to={`/post/${post.slug}`}>
+        <Link key={post.title} to={`/post/${post.slug}`}>
           <div key={post.title} className='flex flex-row items-center justify-start mb-2 py-2 rounded-full hover:bg-slate-100 hover:text-blue-700 ease-linear transition duration-300'>
 
             <img alt={post.title} height='60px' width='60px' className='align-middle object-cover rounded-full' src={post.featuredimage.url} />

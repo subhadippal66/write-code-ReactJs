@@ -47,11 +47,11 @@ const CommentsForm = ({slug}) => {
     }
 
   return (
-    <div className='mb-8 rounded-xl bg-white p-4 sm:p-8 pb-12 ring-2 ring-gray-200'>
+    <div className='mb-8 rounded-xl bg-white p-4 sm:p-8 pb-12 ringg-2 shadow-lg ring-grayy-400'>
         <h1 className='text-xl mb-8 font-semibold border-b pb-4'>Comments</h1>
         <div className='grid grid-cols-1  gap-4 mb-4'>
             <textarea ref={commentEL} 
-                className='p-4 outline-none w-full rounded-xl focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
+                className='p-4 outline-none w-full rounded-xl focus:ring-2 focus:ring-grayy-400 bg-gray-100 text-gray-700'
                 placeholder='Comment'
                 name='comment'
             />
@@ -60,14 +60,14 @@ const CommentsForm = ({slug}) => {
             <input 
                 type='text'
                 ref={nameEL}
-                className='py-2 px-4 outline-none w-full rounded-xl focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
+                className='py-2 px-4 outline-none w-full rounded-xl focus:ring-2 focus:ring-grayy-400 bg-gray-100 text-gray-700'
                 placeholder='Name'
                 name='name'
             />
             <input 
                 type='text'
                 ref={emailEL}
-                className='py-2 px-4 outline-none w-full rounded-xl focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
+                className='py-2 px-4 outline-none w-full rounded-xl focus:ring-2 focus:ring-grayy-400 bg-gray-100 text-gray-700'
                 placeholder='Email'
                 name='email'
             />

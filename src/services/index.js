@@ -7,7 +7,7 @@ const graphqlAPI = 'https://api-ap-south-1.graphcms.com/v2/cl02mlwukbi1801xnc4gw
 export const getPosts = async () => {
     const query = gql`
       query MyQuery {
-        postsConnection {
+        postsConnection(orderBy: publishedAt_DESC) {
           edges {
             node {
               author {
@@ -39,6 +39,32 @@ export const getPosts = async () => {
   
     const result = await request(graphqlAPI, query);
     return result.postsConnection.edges;
+};
+
+
+export const getFeaturedPosts = async () => {
+  const query = gql`
+    query GetCategoryPost() {
+      posts(where: {featuredpost: true},orderBy: publishedAt_DESC) {
+        author {
+          name
+          photo {
+            url
+          }
+        }
+        featuredimage {
+          url
+        }
+        title
+        slug
+        createdAt
+      }
+    }   
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.posts;
 };
 
 export const getPostDetails = async(slug)=>{

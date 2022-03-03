@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const Categories = ({categories}) => {
   return (
-    <div className='bg-white rounded-xl p-4 sm:p-8 ring-2 ring-gray-200 mb-8'>
+    <div className='bg-white rounded-xl p-4 sm:p-8 ringg-2 shadow-lg ring-grayy-400 mb-8 text-center'>
       <h3 className='font-semibold mb-4 text-xl border-b pb-4'>
-        categories
+        Categories
       </h3>
       {categories.map((category)=>(
         <Link key={category.slug}  to={`/category/${category.slug}`}>
